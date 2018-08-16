@@ -75,14 +75,7 @@ play <- function(){
   state <<-  as.character(1:9)
   winner <<- FALSE
   triples <<- list(
-    c(1,2,3),
-    c(4,5,6),
-    c(7,8,9),
-    c(1,4,7),
-    c(2,5,8),
-    c(3,6,9),
-    c(1,5,9),
-    c(3,5,7)  )
+    c(1,2,3),c(4,5,6),c(7,8,9),c(1,4,7),c(2,5,8),c(3,6,9),c(1,5,9),c(3,5,7))
   
   num_players<-as.character(readline('How many players (1 if against computer): '))
   if(num_players == '2')
