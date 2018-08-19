@@ -38,7 +38,7 @@ prompt_user<-function(who,state){
 
 update <- function(state, who, pos){
   if(who == 1){
-    state[pos] <<-'x' 
+    state[pos] <<-'x'
   }else{
     state[pos] <<- 'o'
   }
@@ -47,13 +47,13 @@ update <- function(state, who, pos){
 check_winner <- function(state){
   for(i in (1:8)){
     if(all(triples[[i]] %in% which(state=='x'))){
-      cat('x wins','\n','\n')
+      cat('#### X WINS ####','\n','\n')
       winner<<-TRUE
     }
   }
   for(i in (1:8)){
     if(all(triples[[i]] %in% which(state=='o'))){
-      cat('o wins','\n','\n')
+      cat('#### O WINS ####','\n','\n')
       winner<<-TRUE
     }
   }
